@@ -1,0 +1,59 @@
+
+.box{
+    font-size: 0.5em;
+    width: 12.5em;
+    height: 12.5em;
+    margin: 0 auto;
+    background: rgba(233, 233, 205, 0.4);
+    position: relative;
+    border: 0.15em solid rgb(166, 166, 131);
+    border-radius: 5%;
+}
+
+.e {
+    position:absolute;
+    left: 6em;
+    bottom: 5em; 
+}
+
+.b {
+    position: absolute;
+    left: 4em;
+    bottom: 4em; 
+}
+
+.box:hover .b{
+    animation: move_b 3s linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    /*animation: myOrbit 4s linear infinite;*/
+
+}
+
+.box:hover .e {
+    animation: move_e 3s linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    /*animation: myOrbit 4s linear infinite;*/
+
+}
+
+@keyframes move_b {
+    100%  {
+        left: 0.5em;
+        bottom: 0.5em; 
+    }
+}
+
+@keyframes move_e {
+    100% {
+        left: 2.5em;
+        bottom: 1.5em; 
+    }
+}
+@keyframes myOrbit {
+    from { transform: rotate(0deg) translateX(3.5rem) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(3.5rem) rotate(-360deg); }
+}
+
+
